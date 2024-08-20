@@ -1,0 +1,15 @@
+.headerline {
+    display: flex;
+    width: 100%; /* 画面幅に合わせてレスポンシブに */
+    /* max-width: 1440px; 最大幅を1440pxに設定 */
+    height: 60px;
+    background-color: #121212; /* 背景色を追加 */
+    padding: 10px 20px; /* 上下のパディングを追加して高さを調整 */
+    align-items: center;
+}
+
+.logo {
+    display: flex; 
+    align-items: center;  
+    gap: 5px;
+}
