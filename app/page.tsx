@@ -1,6 +1,7 @@
 import Image from "next/image";
 import '../styles/global.css'
 import styles from '@/app/styles/page.module.css'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
           <p className={styles.theme}>
             さまざまな角度から自分だけの予想を。
           </p>
+          <Link href="/register">
           <div className={styles.regist_container}>
             <div className={styles.regist_frame}>
               <button className={styles.regist_button}>
@@ -17,6 +19,7 @@ export default function Home() {
               </button >
             </div>
           </div>
+          </Link>
         </div>
         <div className={styles.home_image}>
           <Image

@@ -1,0 +1,55 @@
+.completeMain {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.completeFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 744px;
+    height: 630px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top:50px
+}
+
+@media (max-width: 768px) {
+    .completeFrame {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 420px) {
+    .completeFrame {
+        width: calc(100%);
+    }
+}
+
+.CregisterTitle {
+    font-size: 24px;
+    color: #121212;
+    font-weight: bold;
+    font-family: 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.Cstepcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 90px;
+    gap: 30px;
+}
+.Ctriangleright {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 40px solid #D9D9D9;
+}
