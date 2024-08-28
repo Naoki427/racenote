@@ -6,7 +6,7 @@ import StepCircle from '../components/layouts/register/steplogo';
 import InputUserInfo from '@/app/components/layouts/register/inputuserinfo'
 const CompleteRegiteration: NextPage = () => {
     return (
-        <div className={styles.completeMain}>
+        <main className={styles.completeMain}>
             <div className={styles.completeFrame}>
             <div className={styles.CregisterTitle}>
                 新規アカウント登録
@@ -18,7 +18,7 @@ const CompleteRegiteration: NextPage = () => {
             </div>
                 <InputUserInfo></InputUserInfo>
             </div>
-        </div>
+        </main>
     );
 };
 
