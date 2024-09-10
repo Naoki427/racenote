@@ -14,7 +14,6 @@ const SidebarButton: React.FC<SidebarButtonProps>  = ({ onMake }) => {
     return (
         <div>
             <button
-                // onClick={onMake}
                 onFocus={() => {
                     setIsNewButtonFocused(true);
                     onMake();

@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+// import { signIn } from '@/auth';
 import styles from '@/app/components/layouts/register/styles/emailinput.module.css'
 
 const EmailInput: React.FC = () => {
@@ -23,9 +24,10 @@ const EmailInput: React.FC = () => {
     setIsFocused(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isValid) {
+      // const result = await signIn('email', { email, redirect: false });
       alert(`${email}に確認用のメールが送信されました！`);
       // ここでメールアドレスを送信するロジックを追加できます
     } else {

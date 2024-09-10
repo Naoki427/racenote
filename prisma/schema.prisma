@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())  // ユーザーの一意のID
+  email      String?  @unique               // メールアドレス（null可能、外部APIでのログインの場合は不要）
+  password   String?                        // パスワード（null可能、外部APIでのログインの場合は不要）
+  externalId String?  @unique               // 外部APIの一意のID（null可能）
+  username   String                         // ユーザーネーム（表示名、メールアドレス登録でも外部APIでも必須）
+  createdAt  DateTime @default(now())       // アカウント作成日
+  updatedAt  DateTime @updatedAt            // 更新日
+}
+
+
+
+model VerificationToken {
+  id String @id @default(uuid()) 
+  identifier String?
+  email String?
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
