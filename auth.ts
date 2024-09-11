@@ -13,5 +13,9 @@ export const {
     session:{
         strategy: "jwt"
     },
+    pages: {
+        signIn: "/auth/signin",
+        // verifyRequest: "/complete-registeration",
+      },
     ...authConfig
 })

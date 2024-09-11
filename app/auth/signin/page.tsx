@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from '@/app/register/styles/page.module.css'
 import '@/styles/global.css'
 import StepCircle  from '@/app/components/layouts/register/steplogo';
+import EmailInput from '@/app/components/layouts/register/emailinput';
 
 const SignIn: NextPage = () => {
   return (
@@ -17,7 +18,7 @@ const SignIn: NextPage = () => {
               <div className={styles.triangleright}></div>
               <StepCircle innerColor = "white" lineColor = "#D9D9D9" number='2' step='情報入力'/>
             </div>
-            {/* <EmailInput/> */}
+            { <EmailInput/> }
             <div className={styles.divline}></div>
             <div className={styles.optionText}>外部アカウントで登録</div>
             <div className={styles.optionContainer}>

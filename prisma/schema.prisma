@@ -15,12 +15,17 @@ datasource db {
 
 model User {
   id         String   @id @default(uuid())  // ユーザーの一意のID
+  name       String?                         // ユーザーネーム（表示名、メールアドレス登録でも外部APIでも必須）
   email      String?  @unique               // メールアドレス（null可能、外部APIでのログインの場合は不要）
+  emailVerified DateTime?
   password   String?                        // パスワード（null可能、外部APIでのログインの場合は不要）
   externalId String?  @unique               // 外部APIの一意のID（null可能）
-  username   String                         // ユーザーネーム（表示名、メールアドレス登録でも外部APIでも必須）
   createdAt  DateTime @default(now())       // アカウント作成日
   updatedAt  DateTime @updatedAt            // 更新日
+
+  image         String?  // ユーザーのプロフィール画像（任意）
+
+  @@map("users") // テーブル名が"users"にマッピングされます（デフォルト）
 }
 
 

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-// import { signIn } from '@/auth';
+import { handleSignIn } from '@/actions/handlesignin';
 import styles from '@/app/components/layouts/register/styles/emailinput.module.css'
 
 const EmailInput: React.FC = () => {
@@ -27,9 +27,8 @@ const EmailInput: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isValid) {
-      // const result = await signIn('email', { email, redirect: false });
+      await handleSignIn(email);
       alert(`${email}に確認用のメールが送信されました！`);
-      // ここでメールアドレスを送信するロジックを追加できます
     } else {
       alert('有効なメールアドレスを入力してください。');
     }
