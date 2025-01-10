@@ -2,12 +2,6 @@
 
 This project is currently under development. Features are being added and improved, so unexpected behavior may occur. We appreciate your understanding and cooperation.
 
-
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
